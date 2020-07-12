@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cities">
+        <item> 경기도 가평군 </item>
+        <item> 경기도 고양시 </item>
+        <item> 경기도 과천시 </item>
+        <item> 경기도 광명시 </item>
+        <item> 경기도 광주시 </item>
+        <item> 경기도 구리시 </item>
+        <item> 경기도 군포시 </item>
+        <item> 경기도 김포시 </item>
+        <item> 경기도 남양주시 </item>
+        <item> 경기도 동두천시 </item>
+        <item> 경기도 부천시 </item>
+        <item> 경기도 성남시 </item>
+        <item> 경기도 수원시 </item>
+        <item> 경기도 시흥시 </item>
+        <item> 경기도 안산시 </item>
+        <item> 경기도 안성시 </item>
+        <item> 경기도 안양시 </item>
+        <item> 경기도 양주시 </item>
+        <item> 경기도 양평군 </item>
+        <item> 경기도 여주시 </item>
+        <item> 경기도 연천군 </item>
+        <item> 경기도 오산시 </item>
+        <item> 경기도 용인시 </item>
+        <item> 경기도 의왕시 </item>
+        <item> 경기도 의정부시 </item>
+        <item> 경기도 이천시 </item>
+        <item> 경기도 파주시 </item>
+        <item> 경기도 평택시 </item>
+        <item> 경기도 포천시 </item>
+        <item> 경기도 하남시 </item>
+        <item> 경기도 화성시 </item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AAAAAA"
+    android:orientation="vertical"
+    tools:context=".ForecastActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_main_location"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+            android:paddingStart="30dp"
+            android:text="지역"
+            android:textColor="#333333"
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_margin="18dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/main_block_background"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_forecast_presentSkyStat"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp" />
+
+                <TextView
+                    android:id="@+id/tv_forecast_presentTemperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:text="기온"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_forecast_summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="10dp"
+                        android:text="요약"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_forecast_highTemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text="최고"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:text=" / "
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_forecast_lowTemp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:text="최저"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+<!--                    유닛 1-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/time_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시간"
+                            android:textSize="18sp"/>
+
+                        <ImageView
+                            android:id="@+id/sky_stat_1"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/main_block_background" />
+
+                        <TextView
+                            android:id="@+id/temperature_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="기온"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/raindrop" />
+
+                            <TextView
+                                android:id="@+id/possibility_rain_1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="확률"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+<!--                    유닛 2-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/time_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시간"
+                            android:textSize="18sp"/>
+
+                        <ImageView
+                            android:id="@+id/sky_stat_2"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/main_block_background" />
+
+                        <TextView
+                            android:id="@+id/temperature_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="기온"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/raindrop" />
+
+                            <TextView
+                                android:id="@+id/possibility_rain_2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="확률"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+<!--                    유닛 3-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/time_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시간"
+                            android:textSize="18sp"/>
+
+                        <ImageView
+                            android:id="@+id/sky_stat_3"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/main_block_background" />
+
+                        <TextView
+                            android:id="@+id/temperature_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="기온"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/raindrop" />
+
+                            <TextView
+                                android:id="@+id/possibility_rain_3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="확률"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+<!--                    유닛 4-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/time_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시간"
+                            android:textSize="18sp"/>
+
+                        <ImageView
+                            android:id="@+id/sky_stat_4"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/main_block_background" />
+
+                        <TextView
+                            android:id="@+id/temperature_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="기온"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/raindrop" />
+
+                            <TextView
+                                android:id="@+id/possibility_rain_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="확률"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+<!--                    유닛 5-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/time_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시간"
+                            android:textSize="18sp"/>
+
+                        <ImageView
+                            android:id="@+id/sky_stat_5"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/main_block_background" />
+
+                        <TextView
+                            android:id="@+id/temperature_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="기온"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/raindrop" />
+
+                            <TextView
+                                android:id="@+id/possibility_rain_5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="확률"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+<!--                    유닛 6-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/time_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시간"
+                            android:textSize="18sp"/>
+
+                        <ImageView
+                            android:id="@+id/sky_stat_6"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/main_block_background" />
+
+                        <TextView
+                            android:id="@+id/temperature_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="기온"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/raindrop" />
+
+                            <TextView
+                                android:id="@+id/possibility_rain_6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="확률"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+<!--                    유닛 7-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/time_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시간"
+                            android:textSize="18sp"/>
+
+                        <ImageView
+                            android:id="@+id/sky_stat_7"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/main_block_background" />
+
+                        <TextView
+                            android:id="@+id/temperature_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="기온"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/raindrop" />
+
+                            <TextView
+                                android:id="@+id/possibility_rain_7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="확률"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+<!--                    유닛 8-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/time_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="시간"
+                            android:textSize="18sp"/>
+
+                        <ImageView
+                            android:id="@+id/sky_stat_8"
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/main_block_background" />
+
+                        <TextView
+                            android:id="@+id/temperature_8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="기온"
+                            android:textSize="18sp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_horizontal">
+
+                            <ImageView
+                                android:layout_width="15dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/raindrop" />
+
+                            <TextView
+                                android:id="@+id/possibility_rain_8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="확률"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+
+
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="오후부터 장맛비가 내리니\n외출 시 우산을 꼭 챙기세요"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:background="@drawable/main_block_background"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/date_1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="25dp"-->
+
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingStart="30dp"-->
+<!--                    android:paddingEnd="30dp"-->
+<!--                    android:text="날짜"-->
+<!--                    android:textSize="18sp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/time_1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="25dp"-->
+
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingStart="30dp"-->
+<!--                    android:paddingEnd="30dp"-->
+<!--                    android:text="시간"-->
+<!--                    android:textSize="18sp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/temperature_1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginEnd="3dp"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingStart="10dp"-->
+<!--                android:paddingEnd="10dp"-->
+<!--                android:text="기온"-->
+<!--                android:textSize="18sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/sky_stat_1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginStart="3dp"-->
+<!--                android:layout_marginEnd="3dp"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingStart="10dp"-->
+<!--                android:paddingEnd="10dp"-->
+<!--                android:text="하늘"-->
+<!--                android:textSize="18sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/possibility_rain_1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginStart="3dp"-->
+<!--                android:layout_marginEnd="3dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="강수확률"-->
+<!--                android:textSize="18sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/humidity_1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginStart="3dp"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingStart="10dp"-->
+<!--                android:paddingEnd="10dp"-->
+<!--                android:text="습도"-->
+<!--                android:textSize="18sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:background="@drawable/main_block_background"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/date_2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="25dp"-->
+
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingStart="30dp"-->
+<!--                    android:paddingEnd="30dp"-->
+<!--                    android:text="날짜"-->
+<!--                    android:textSize="18sp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/time_2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="25dp"-->
+
+<!--                    android:layout_weight="1"-->
+<!--                    android:gravity="center"-->
+<!--                    android:paddingStart="30dp"-->
+<!--                    android:paddingEnd="30dp"-->
+<!--                    android:text="시간"-->
+<!--                    android:textSize="18sp" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/temperature_2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginEnd="3dp"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingStart="10dp"-->
+<!--                android:paddingEnd="10dp"-->
+<!--                android:text="기온"-->
+<!--                android:textSize="18sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/sky_stat_2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginStart="3dp"-->
+<!--                android:layout_marginEnd="3dp"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingStart="10dp"-->
+<!--                android:paddingEnd="10dp"-->
+<!--                android:text="하늘"-->
+<!--                android:textSize="18sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/possibility_rain_2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginStart="3dp"-->
+<!--                android:layout_marginEnd="3dp"-->
+<!--                android:gravity="center"-->
+<!--                android:text="강수확률"-->
+<!--                android:textSize="18sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/humidity_2"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginStart="3dp"-->
+<!--                android:gravity="center"-->
+<!--                android:paddingStart="10dp"-->
+<!--                android:paddingEnd="10dp"-->
+<!--                android:text="습도"-->
+<!--                android:textSize="18sp" />-->
+
+<!--        </LinearLayout>-->
+
+
+    </LinearLayout>
+
+</LinearLayout>
